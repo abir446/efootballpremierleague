@@ -1,11 +1,13 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 import type { Config } from "tailwindcss";
+import  {nextui} from "@nextui-org/react";
 
 export default {
-    darkMode: ["class"],
-    content: [
+  content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
   	extend: {
@@ -55,8 +57,20 @@ export default {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+		  keyframes: {
+			shimmer: {
+			  from: {
+				backgroundPosition: "0 0",
+			  },
+			  to: {
+				backgroundPosition: "-200% 0",
+			  },
+			},
+		  },
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  
+  darkMode: ["class", "class"],
+  plugins: [nextui(), require("tailwindcss-animate")],
 } satisfies Config;
