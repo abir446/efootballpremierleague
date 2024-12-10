@@ -1,10 +1,8 @@
-"use client";
+'use client'
 import React from "react";
 import { Vortex } from "../components/ui/vortex";
-interface Props {
-  children: React.ReactNode;
-}
-export default function Background({ children }:Props) {
+
+export default function Background({children}) {
   return (
     <div className="w-full h-screen overflow-hidden">
       <Vortex
