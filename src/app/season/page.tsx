@@ -3,7 +3,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="pt-[10vh]">
+    <div className="pt-[10vh] ">
       <SeasonPage />
     </div>
   );
