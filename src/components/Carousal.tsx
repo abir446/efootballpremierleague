@@ -29,7 +29,7 @@ export function CarouselPlugin() {
   return (
     <Carousel
       plugins={[plugin.current]}
-      className="w-[90%] h-[60vh]"
+      className="w-[48%] h-[60vh]"
       onMouseEnter={plugin.current.stop}
       onMouseLeave={plugin.current.reset}
       opts={{
@@ -42,7 +42,7 @@ export function CarouselPlugin() {
           <CarouselItem key={index}>
             <div className="p-1 relative rounded-[30px]">
               <Card className="w-full bg-transparent  border-none h-[59vh]">
-                <CardContent className="flex aspect  items-center justify-center overflow-hidden ">
+                <CardContent className="flex items-center justify-center overflow-hidden ">
                   <Image
                     src={imageSrc}
                     alt="banner 1"

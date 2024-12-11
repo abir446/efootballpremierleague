@@ -14,7 +14,7 @@ export default function Navbar() {
           />
           <h1 className="text-[4.5vh]">Premier League</h1>
         </div>
-        <div className=" flex justify-center items-center gap-10 text-lime-400">
+        <div className=" flex justify-center items-center gap-10 text-white">
           <div className="flex justify-center items-center gap-10">
           <Link href={"#"}>Season</Link>
           <Link href={"#"}>About Us</Link>
