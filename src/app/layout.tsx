@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import "../styles/global.css";
-import Background from "@/components/Background"
+import Background from "@/components/Background";
 import { NextUIProvider } from "@nextui-org/react";
 import Navbar from "../components/Navbar";
 
@@ -18,8 +18,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "EPL-Kolkata",
-  description: "Home of Official eFootball League",
+  title: "Efootball Premier League",
+  description: "Home of Official Efootball League, Kolkata, India",
 };
 
 export default function RootLayout({
@@ -32,10 +32,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen w-full`}
       >
-        <NextUIProvider>
-          <Navbar />
-          <div className="pt-[10vh]">{children} </div>
-        </NextUIProvider>
+        <Background>
+          <NextUIProvider>
+            <Navbar />
+            {children}
+          </NextUIProvider>
+        </Background>
       </body>
     </html>
   );

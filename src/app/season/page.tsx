@@ -1,10 +1,10 @@
-import Link from "next/link";
+import { SeasonPage } from "@/components/SeasonPage";
 import React from "react";
 
 const page = () => {
   return (
-    <div>
-      <Link href={"/season/fixtures"}>Fixtures</Link>
+    <div className="pt-[10vh]">
+      <SeasonPage />
     </div>
   );
 };

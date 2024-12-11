@@ -1,7 +1,7 @@
 import { CarouselPlugin } from "@/components/Carousal";
 import { Button } from "@nextui-org/react";
 
-import Image from "next/image";
+// import Image from "next/image";
 
 export default function Home() {
   return (

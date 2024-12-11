@@ -38,7 +38,7 @@ export function SeasonPage() {
   ];
 
   return (
-    <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-[80vh] md:w-full   items-start justify-start my-2">
+    <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-[80vh] md:w-full py-2   items-start justify-start">
       <Tabs tabs={tabs} />
     </div>
   );
