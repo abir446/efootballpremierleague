@@ -1,9 +1,8 @@
 "use client";
-
-import React, { useState, ChangeEvent, FormEvent } from "react";
-import emailjs from "emailjs-com";
 import { Link } from "lucide-react";
 import { Button } from "@nextui-org/react";
+import { useState, ChangeEvent, FormEvent } from "react";
+import emailjs from "emailjs-com";
 
 interface FormData {
   name: string;
@@ -36,7 +35,11 @@ const AboutPage: React.FC = () => {
       .send(
         "YOUR_SERVICE_ID", // Replace with your EmailJS Service ID
         "YOUR_TEMPLATE_ID", // Replace with your EmailJS Template ID
-        formData,
+        {
+          user_name: formData.name,
+          user_email: formData.email,
+          user_message: formData.message,
+        },
         "YOUR_PUBLIC_KEY" // Replace with your EmailJS Public Key
       )
       .then(
@@ -50,6 +53,7 @@ const AboutPage: React.FC = () => {
         }
       );
   };
+
   return (
     <div className="text-white absolute left-0 right-0 top-0 bottom-0 flex justify-center items-center m-auto w-full h-screen flex-col">
       <h1 className="text-[10vh] ">We’re Here to Help!</h1>
