@@ -4,14 +4,14 @@ import Link from "next/link";
 export default function Navbar() {
   return (
     <>
-      <div className="fixed w-full top-0 h-[10vh] bg-zinc-900 text-white flex justify-between items-center px-24 backdrop-filter backdrop-blur-lg bg-opacity-30 z-50">
+      <div className="fixed w-full top-0 h-[10vh] bg-zinc-900 text-white flex justify-between items-center pl-14 pr-20 backdrop-filter backdrop-blur-lg bg-opacity-30 z-50">
         <div className="">
           <Link href={"/"} className="flex justify-center items-center gap-3">
             <Image
               src="/images/logo.png"
               alt="Description of the image"
-              width={60}
-              height={45}
+              width={55}
+              height={40}
             />
             <h1 className="text-[4.5vh]">Premier League</h1>
           </Link>
@@ -21,9 +21,15 @@ export default function Navbar() {
             <Link href={"/season"}>Season</Link>
             <Link href={"/about"}>About Us</Link>
           </div>
-          <Button className="cursor-pointer" variant="shadow">
-            Join Us
-          </Button>
+          <Link
+            href={
+              "https://www.instagram.com/efootballpremierleague/profilecard/"
+            }
+          >
+            <Button className="cursor-pointer" variant="shadow">
+              Join Us
+            </Button>
+          </Link>
         </div>
       </div>
     </>

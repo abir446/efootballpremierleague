@@ -10,7 +10,7 @@ export default function Background({ children }: Props) {
       <Vortex
         backgroundColor="black"
         rangeY={800}
-        particleCount={500}
+        particleCount={300}
         baseHue={120}
         className="w-full h-full"
       >
