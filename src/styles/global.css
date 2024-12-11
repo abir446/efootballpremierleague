@@ -1,0 +1,11 @@
+
+.custom-background {
+    background-color: hsla(130, 0%, 4%, 1);
+    background-image: 
+        radial-gradient(at 79% 0%, hsla(258, 100%, 50%, 0.44) 0px, transparent 50%),
+        radial-gradient(at 40% 98%, hsla(266, 100%, 40%, 0.57) 0px, transparent 50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}

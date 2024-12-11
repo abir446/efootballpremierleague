@@ -1,6 +1,5 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
 import type { Config } from "tailwindcss";
-import  {nextui} from "@nextui-org/react";
+const {nextui} = require("@nextui-org/react");
 
 export default {
   content: [
