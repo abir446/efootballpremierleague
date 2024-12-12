@@ -32,12 +32,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen w-full`}
       >
-        <Background>
-          <NextUIProvider>
-            <Navbar />
-            {children}
-          </NextUIProvider>
-        </Background>
+        <NextUIProvider>
+          <Navbar />
+          {children}
+        </NextUIProvider>
       </body>
     </html>
   );
