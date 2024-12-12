@@ -57,7 +57,7 @@ export function PointsTable() {
 
         responses.forEach((response: AxiosResponse, index) => {
           const groupName = `Group${String.fromCharCode(65 + index)}`;
-          const rows = response.data.values; // Skip the header row
+          const rows = response.data.values;
 
           parsedGroups[groupName] = rows.map((row: string[]) => ({
             player: row[0],
@@ -73,7 +73,7 @@ export function PointsTable() {
           }));
         });
 
-        console.log("Fetched Groups:", parsedGroups); // Debugging
+        // console.log("Fetched Groups:", parsedGroups);
         setGroups(parsedGroups);
         setLoading(false);
       } catch (error) {
@@ -92,17 +92,21 @@ export function PointsTable() {
   return (
     <div>
       <div className="mb-4">
-        <label htmlFor="group" className="mr-2 font-medium">
+        <label htmlFor="group" className="mr-2 font-sm">
           Select Group:
         </label>
         <select
           id="group"
           value={selectedGroup}
           onChange={handleGroupChange}
-          className="border rounded px-2 py-1"
+          className="border bg-green-400 text-sm rounded-xl px-2 py-1"
         >
           {Object.keys(groups).map((group) => (
-            <option key={group} value={group}>
+            <option
+              key={group}
+              value={group}
+              className="bg-green-800 rounded-full py-1 bg-opacity-60"
+            >
               {group}
             </option>
           ))}
@@ -113,16 +117,18 @@ export function PointsTable() {
         <TableCaption>{selectedGroup} Points Table</TableCaption>
         <TableHeader>
           <TableRow>
-            <TableHead className="w-[150px]">Player</TableHead>
-            <TableHead>Played</TableHead>
-            <TableHead>W</TableHead>
-            <TableHead>D</TableHead>
-            <TableHead>L</TableHead>
-            <TableHead>Points</TableHead>
-            <TableHead>Goals</TableHead>
-            <TableHead>GD</TableHead>
-            <TableHead>GA</TableHead>
-            <TableHead>Form</TableHead>
+            <TableHead className="w-[150px] text-white font-semibold">
+              Player
+            </TableHead>
+            <TableHead className="text-white font-semibold">Played</TableHead>
+            <TableHead className="text-white font-semibold">W</TableHead>
+            <TableHead className="text-white font-semibold">D</TableHead>
+            <TableHead className="text-white font-semibold">L</TableHead>
+            <TableHead className="text-white font-semibold">Points</TableHead>
+            <TableHead className="text-white font-semibold">Goals</TableHead>
+            <TableHead className="text-white font-semibold">GD</TableHead>
+            <TableHead className="text-white font-semibold">GA</TableHead>
+            <TableHead className="text-white font-semibold">Form</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -141,14 +147,6 @@ export function PointsTable() {
             </TableRow>
           ))}
         </TableBody>
-        <TableFooter>
-          <TableRow>
-            <TableCell colSpan={9} className="font-medium">
-              Total Players
-            </TableCell>
-            <TableCell>{teams.length}</TableCell>
-          </TableRow>
-        </TableFooter>
       </Table>
     </div>
   );

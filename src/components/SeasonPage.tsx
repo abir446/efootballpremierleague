@@ -4,16 +4,16 @@ import Image from "next/image";
 import { Tabs } from "./ui/tabs";
 import { PointsTable } from "./Table";
 
-
 export function SeasonPage() {
+  const tabsClass: string =
+    "w-full overflow-hidden relative h-full backdrop-filter backdrop-blur-lg bg-opacity-50 rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-green-800";
+
   const tabs = [
     {
       title: "Leaderboard",
       value: "leaderboard",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p>Leaderboard</p>
-          {/* <DummyContent /> */}
+        <div className={tabsClass}>
           <PointsTable />
         </div>
       ),
@@ -22,7 +22,7 @@ export function SeasonPage() {
       title: "Fixtures",
       value: "fixtures",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <div className={tabsClass}>
           <p>Fixtures</p>
           {/* <DummyContent /> */}
         </div>
@@ -32,7 +32,7 @@ export function SeasonPage() {
       title: "Statistics",
       value: "statistics",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <div className={tabsClass}>
           <p>Statistics</p>
           {/* <DummyContent /> */}
         </div>
@@ -47,14 +47,14 @@ export function SeasonPage() {
   );
 }
 
-const DummyContent = () => {
-  return (
-    <Image
-      src="/linear.webp"
-      alt="dummy image"
-      width="1000"
-      height="1000"
-      className="object-cover object-left-top h-[60%]  md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto"
-    />
-  );
-};
+// const DummyContent = () => {
+//   return (
+//     <Image
+//       src="/linear.webp"
+//       alt="dummy image"
+//       width="1000"
+//       height="1000"
+//       className="object-cover object-left-top h-[60%]  md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto"
+//     />
+//   );
+// };
