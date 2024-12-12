@@ -18,8 +18,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Efootball Premier League",
-  description: "Home of Official Efootball League, Kolkata, India",
+  title: "eFootball Premier League",
+  description: "Home of Official eFootball League, Kolkata, India",
 };
 
 export default function RootLayout({
