@@ -42,8 +42,8 @@ export function PointsTable() {
   useEffect(() => {
     const fetchSheetData = async () => {
       try {
-        const sheetId = "1E0LkDApAisf15KY-VCue9wU_t1Mag18vAzgArSVTmR8"; // Replace with your Google Sheet ID
-        const apiKey = "AIzaSyCac6f-HBu5vRsaTjyqHSVjQwUpDDj52yc"; // Replace with your API Key
+        const sheetId = process.env.NEXT_PUBLIC_SPREADSHEET_ID;
+        const apiKey = process.env.NEXT_PUBLIC_GOOGLE_CLOUD_API_KEY;
         const ranges = ["B4:K8", "B12:K16", "B20:K24", "B28:K32"];
 
         const requests = ranges.map((range) =>
