@@ -41,3 +41,4 @@ next-env.d.ts
 .history
 node_modules
 .env
+.env.locasl
