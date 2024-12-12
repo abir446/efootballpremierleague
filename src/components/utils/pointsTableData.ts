@@ -1,0 +1,203 @@
+type Team = {
+  team: string;
+  played: number;
+  wins: number;
+  draws: number;
+  losses: number;
+  goalDifference: number;
+  points: number;
+};
+
+type Groups = {
+  [key: string]: Team[];
+};
+export const groups: Groups = {
+  GroupA: [
+    {
+      team: "Team A",
+      played: 5,
+      wins: 3,
+      draws: 1,
+      losses: 1,
+      goalDifference: 5,
+      points: 10,
+    },
+    {
+      team: "Team B",
+      played: 5,
+      wins: 3,
+      draws: 0,
+      losses: 2,
+      goalDifference: 3,
+      points: 9,
+    },
+    {
+      team: "Team C",
+      played: 5,
+      wins: 2,
+      draws: 2,
+      losses: 1,
+      goalDifference: 2,
+      points: 8,
+    },
+    {
+      team: "Team D",
+      played: 5,
+      wins: 1,
+      draws: 3,
+      losses: 1,
+      goalDifference: 0,
+      points: 6,
+    },
+    {
+      team: "Team E",
+      played: 5,
+      wins: 1,
+      draws: 1,
+      losses: 3,
+      goalDifference: -4,
+      points: 4,
+    },
+  ],
+  GroupB: [
+    {
+      team: "Team F",
+      played: 5,
+      wins: 0,
+      draws: 2,
+      losses: 3,
+      goalDifference: -6,
+      points: 2,
+    },
+    {
+      team: "Team G",
+      played: 5,
+      wins: 2,
+      draws: 2,
+      losses: 1,
+      goalDifference: 1,
+      points: 8,
+    },
+    {
+      team: "Team H",
+      played: 5,
+      wins: 1,
+      draws: 3,
+      losses: 1,
+      goalDifference: -1,
+      points: 6,
+    },
+    {
+      team: "Team I",
+      played: 5,
+      wins: 3,
+      draws: 1,
+      losses: 1,
+      goalDifference: 6,
+      points: 10,
+    },
+    {
+      team: "Team J",
+      played: 5,
+      wins: 1,
+      draws: 1,
+      losses: 3,
+      goalDifference: -3,
+      points: 4,
+    },
+  ],
+  GroupC: [
+    {
+      team: "Team K",
+      played: 5,
+      wins: 4,
+      draws: 0,
+      losses: 1,
+      goalDifference: 7,
+      points: 12,
+    },
+    {
+      team: "Team L",
+      played: 5,
+      wins: 2,
+      draws: 1,
+      losses: 2,
+      goalDifference: 0,
+      points: 7,
+    },
+    {
+      team: "Team M",
+      played: 5,
+      wins: 3,
+      draws: 1,
+      losses: 1,
+      goalDifference: 5,
+      points: 10,
+    },
+    {
+      team: "Team N",
+      played: 5,
+      wins: 1,
+      draws: 2,
+      losses: 2,
+      goalDifference: -2,
+      points: 5,
+    },
+    {
+      team: "Team O",
+      played: 5,
+      wins: 0,
+      draws: 3,
+      losses: 2,
+      goalDifference: -4,
+      points: 3,
+    },
+  ],
+  GroupD: [
+    {
+      team: "Team P",
+      played: 5,
+      wins: 2,
+      draws: 2,
+      losses: 1,
+      goalDifference: 3,
+      points: 8,
+    },
+    {
+      team: "Team Q",
+      played: 5,
+      wins: 3,
+      draws: 0,
+      losses: 2,
+      goalDifference: 4,
+      points: 9,
+    },
+    {
+      team: "Team R",
+      played: 5,
+      wins: 1,
+      draws: 1,
+      losses: 3,
+      goalDifference: -5,
+      points: 4,
+    },
+    {
+      team: "Team S",
+      played: 5,
+      wins: 4,
+      draws: 0,
+      losses: 1,
+      goalDifference: 8,
+      points: 12,
+    },
+    {
+      team: "Team T",
+      played: 5,
+      wins: 0,
+      draws: 2,
+      losses: 3,
+      goalDifference: -6,
+      points: 2,
+    },
+  ],
+};
