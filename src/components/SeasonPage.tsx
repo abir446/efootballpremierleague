@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { Tabs } from "./ui/tabs";
 import { PointsTable } from "./Table";
 import { GoldenBoot } from "./GoldenBootTable";
@@ -61,8 +60,8 @@ export function SeasonPage() {
   ];
 
   return (
-    <div className="h-[70vh] md:h-[40rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-[80vh] md:w-full py-2   items-start justify-start">
+    <div className="h-[80vh] md:h-[80vh] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-[80vh] md:w-full py-2 md:py-5 lg:py-2 px-2 md:px-10 lg:px-0   items-start justify-start">
       <Tabs tabs={tabs} />
-    </div>
+    </div>  
   );
 }

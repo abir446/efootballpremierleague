@@ -13,11 +13,11 @@ export default function Navbar() {
               width={55}
               height={40}
             />
-            <h1 className="text-[4.5vh]">Premier League</h1>
+            <h1 className="hidden lg:block text-[4.5vh]">Premier League</h1>
           </Link>
         </div>
-        <div className=" flex justify-center items-center gap-10 text-lime-400">
-          <div className="flex justify-center items-center gap-10">
+        <div className=" flex justify-center items-center gap-5 lg:gap-10 text-lime-400">
+          <div className="flex justify-center items-center gap-2  lg:gap-10">
             <Link href={"/season"}>Season</Link>
             <Link href={"/about"}>About Us</Link>
             <Link href={"/contact"}>Contact Us</Link>
@@ -27,7 +27,7 @@ export default function Navbar() {
               "https://www.instagram.com/efootballpremierleague/profilecard/"
             }
           >
-            <Button className="cursor-pointer" variant="shadow">
+            <Button className="cursor-pointer bg-lime-400 text-white text-primary font-semibold" variant="shadow">
               Join Us
             </Button>
           </Link>

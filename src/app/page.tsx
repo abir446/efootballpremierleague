@@ -20,7 +20,7 @@ export default function Home() {
               </p>
               <div className="mt-10 ml-3 flex gap-3 flex-row justify-center items-center absolute">
                 <Link href={"/register"}>
-                  <Button className="" variant="shadow">
+                  <Button className="bg-lime-400 text-white text-primary font-semibold" variant="shadow">
                     Register to play
                   </Button>
                 </Link>
