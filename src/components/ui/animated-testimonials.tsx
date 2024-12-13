@@ -2,7 +2,6 @@
 
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "framer-motion";
-import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -44,10 +43,10 @@ export const AnimatedTestimonials = ({
     return Math.floor(Math.random() * 21) - 10;
   };
   return (
-    <div className="max-w-sm md:max-w-4xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 ">
-      <div className="relative grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-20">
+    <div className="max-w-sm md:max-w-4xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-20">
+      <div className="relative grid grid-cols-1 md:grid-cols-2  gap-1">
         <div>
-          <div className="relative h-80">
+          <div className="relative  h-80 w-72">
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div
@@ -85,8 +84,8 @@ export const AnimatedTestimonials = ({
                     alt={testimonial.name}
                     width={200}
                     height={200}
-                    draggable={false}
-                    quality={100}
+                    draggable={false}                  
+                    quality={100} 
                     className="h-full w-full rounded-3xl object-cover object-center"
                   />
                 </motion.div>
@@ -117,65 +116,10 @@ export const AnimatedTestimonials = ({
             <h3 className="text-2xl font-bold text-white">
               {testimonials[active].name}
             </h3>
-            <p
-              className={`text-sm ${
-                testimonials[active].designation.includes("Developer")
-                  ? "text-lime-400"
-                  : "text-blue-400"
-              } `}
-            >
+            <p className={`text-sm ${testimonials[active].designation.includes("Developer")? 'text-lime-400' :'text-blue-400'} `}>
               {testimonials[active].designation}
             </p>
-            {testimonials[active].designation.includes("Developer") && (
-              <div className="mt-3 inline-block">
-                {testimonials[active].name.includes("Souvik") ? (
-               <div className="flex justify-center items-center gap-1">
-                   <Link href="https://www.linkedin.com/in/souvik-rahut-3059a128a/">
-                    <button>
-                    <Image
-                      src={"/images/ln.svg"}
-                      alt={"linkdin"}
-                      width={30}
-                      height={30}
-                      draggable={false}
-                      quality={100}
-                      className=""
-                    />
-                  </button>
-                  </Link>
-                  <Link href="https://www.instagram.com/maihoonshobu/" >
-                    <button>
-                    <Image
-                      src={"/images/ig.png"}
-                      alt={"instagram"}
-                      width={30}
-                      height={30}
-                      draggable={false}
-                      quality={100}
-                      className=""
-                    />
-                  </button>
-                  </Link>
-                  
-               </div>
-                ) : (
-                 <Link href="https://www.linkedin.com/in/abir-dutta-a30b22251/">
-                   <button>
-                    <Image
-                      src={"/images/ln.svg"}
-                      alt={"linkdin"}
-                      width={30}
-                      height={30}
-                      draggable={false}
-                      quality={100}
-                      className=""
-                    />
-                  </button>
-                 </Link>
-                )}
-              </div>
-            )}
-            <motion.p className="text-lg text-gray-100 mt-4 dark:text-neutral-300">
+            <motion.p className="text-lg text-gray-100 mt-8 dark:text-neutral-300">
               {testimonials[active].quote.split(" ").map((word, index) => (
                 <motion.span
                   key={index}
@@ -200,7 +144,6 @@ export const AnimatedTestimonials = ({
                 </motion.span>
               ))}
             </motion.p>
-           
           </motion.div>
           <div className="flex gap-4 pt-12 md:pt-0">
             <button
