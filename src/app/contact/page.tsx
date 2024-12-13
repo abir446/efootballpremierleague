@@ -1,6 +1,6 @@
 
 "use client";
-import { Link } from "lucide-react";
+// import { Link } from "lucide-react";
 import { Button } from "@nextui-org/react";
 import { useState, ChangeEvent, FormEvent } from "react";
 import emailjs from "emailjs-com";
@@ -65,7 +65,7 @@ const AboutPage: React.FC = () => {
         hear from you !
       </p>
 
-      <form className="flex mt-5 w-[40vw] flex-col" onSubmit={handleSubmit}>
+      <form className="flex mt-5 w-[80vw] md:w-[40vw] flex-col" onSubmit={handleSubmit}>
         <span className="mt-3 uppercase text-sm text-gray-100 font-bold">
           Full Name
         </span>
