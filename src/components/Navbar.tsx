@@ -20,6 +20,7 @@ export default function Navbar() {
           <div className="flex justify-center items-center gap-10">
             <Link href={"/season"}>Season</Link>
             <Link href={"/about"}>About Us</Link>
+            <Link href={"/contact"}>Contact Us</Link>
           </div>
           <Link
             href={
