@@ -1,7 +1,7 @@
 import { Button } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
-import  Menu from "@/components/ui/dropdown";
+
 export default function Navbar() {
   return (
     <>
@@ -14,9 +14,7 @@ export default function Navbar() {
               width={55}
               height={40}
             />
-            <h1 className="hidden lg:block text-[3vh] md:text-[4.5vh]">
-              Premier League
-            </h1>
+            <h1 className="hidden lg:block text-[3vh] md:text-[4.5vh]">Premier League</h1>
           </Link>
         </div>
         <div className="flex justify-center items-center gap-3 md:gap-5 lg:gap-10 text-lime-400">
@@ -25,18 +23,12 @@ export default function Navbar() {
             <Link href={"/about"}>About Us</Link>
             <Link href={"/contact"}>Contact Us</Link>
           </div>
-          <div className=" md:hidden justify-center items-center gap-2 lg:gap-10">
-            <Menu/>
-          </div>
           <Link
             href={
               "https://www.instagram.com/efootballpremierleague/profilecard/"
             }
           >
-            <Button
-              className="cursor-pointer bg-sky-400 text-white font-semibold"
-              variant="shadow"
-            >
+            <Button className="cursor-pointer bg-sky-400 text-white font-semibold" variant="shadow">
               Join Us
             </Button>
           </Link>
