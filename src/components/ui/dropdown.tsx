@@ -12,20 +12,15 @@ import {
 import { Link } from "@nextui-org/react";
 
 export default function Menu() {
-  const [selectedKeys, setSelectedKeys] = React.useState(new Set(["text"]));
-
-  const selectedValue = React.useMemo(
-    () => Array.from(selectedKeys).join(", ").replace(/_/g, ""),
-    [selectedKeys]
-  );
-
   return (
     <Dropdown>
       <DropdownTrigger>
-        <Button variant="shadow" className="cursor-pointer font-semibold">Open Menu</Button>
+        <Button variant="shadow" className="cursor-pointer font-semibold">
+          Open Menu
+        </Button>
       </DropdownTrigger>
       <DropdownMenu aria-label="Link Actions">
-      <DropdownItem key="Home">
+        <DropdownItem key="Home">
           <Link href="/">Home</Link>
         </DropdownItem>
         <DropdownItem key="season">
