@@ -24,9 +24,11 @@
     "embla-carousel-react": "^8.5.1",
     "framer-motion": "^11.14.1",
     "glob": "^11.0.0",
+    "gsap": "^3.12.7",
     "icons-react": "^3.7.1",
+    "locomotive-scroll": "^4.1.4",
     "lucide-react": "^0.468.0",
-    "next": "15.0.4",
+    "next": "^15.1.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-element-to-jsx-string": "^15.0.0",
@@ -35,7 +37,9 @@
     "sonner": "^1.7.1",
     "tabler": "^1.0.0",
     "tailwind-merge": "^2.5.5",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwind-scrollbar": "^3.1.0",
+    "tailwindcss-animate": "^1.0.7",
+    "webpack": "^5.97.1"
   },
   "devDependencies": {
     "@types/node": "^20",

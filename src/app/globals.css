@@ -1,9 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import 'locomotive-scroll/dist/locomotive-scroll.css';
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 @layer base {
@@ -79,4 +79,9 @@ body {
 
 .no-visible-scrollbar::-webkit-scrollbar {
   display: none;
+}
+.text-mesh {
+  background: radial-gradient(circle, #a3e635, #65a30d, #365314);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
