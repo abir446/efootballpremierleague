@@ -9,3 +9,27 @@
     height: 100vh;
     width: 100vw;
 }
+
+/* Footer Specific Styles */
+footer {
+    position: relative;
+    z-index: 10;
+  }
+  
+  footer a:hover {
+    text-decoration: none;
+  }
+  
+  .newsletter-input:focus {
+    box-shadow: 0 0 0 2px rgba(163, 230, 53, 0.5);
+  }
+  
+  @media (max-width: 768px) {
+    footer {
+      text-align: center;
+    }
+  
+    footer .grid {
+      gap: 2rem;
+    }
+  }

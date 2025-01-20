@@ -18,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} antialiased relative min-h-screen w-full`}>
+    <html lang="en" className="!scroll-smooth">
+      <body className={`${inter.className} antialiased relative overflow-x-hidden`}>
         <NextUIProvider>
           <Navbar />
           {children}

@@ -61,11 +61,11 @@ export default function Navbar() {
             </h1>
           </Link>
         </div>
-        <div ref={linksRef} className="flex justify-center items-center gap-3 md:gap-5 lg:gap-10 text-gray-50">
-          <div className="hidden md:flex justify-center items-center gap-2 lg:gap-10">
-            <Link href={"/season"}>Season</Link>
-            <Link href={"/about"}>About Us</Link>
-            <Link href={"/contact"}>Contact Us</Link>
+        <div ref={linksRef} className="flex justify-center items-center gap-3 md:gap-5 lg:gap-10 text-gray-50 ">
+          <div className="hidden md:flex justify-center items-center gap-2  lg:gap-10">
+            <Link className="hover:text-teal-400 duration-300" href={"/season"}>Season</Link>
+            <Link className="hover:text-teal-400 duration-300" href={"/about"}>About Us</Link>
+            <Link className="hover:text-teal-400 duration-300" href={"/contact"}>Contact Us</Link>
           </div>
           <div className=" md:hidden justify-center items-center gap-2 lg:gap-10">
             <Menu/>
