@@ -5,7 +5,7 @@ interface Props {
   children: React.ReactNode;
 }
 const layout = ({ children }: Props) => {
-  return <WavyBackground className="w-full mx-auto pb-40 overflow-hidden">{children}</WavyBackground>;
+  return <WavyBackground className="w-full mx-auto overflow-hidden">{children}</WavyBackground>;
 };
 
 export default layout;

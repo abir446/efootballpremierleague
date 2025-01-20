@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Footer from "@/components/Footer";
+import Magnet from "@/components/Magnet";
 
 interface AnimatedCounterProps {
   end: string | number;
@@ -78,16 +79,16 @@ export default function Home() {
       scale: 1,
       duration: 1,
     })
-    .to(
-      statsRefMobile.current,
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.3,
-        stagger: 0.1,
-      },
-      "-=0.4"
-    )
+      .to(
+        statsRefMobile.current,
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.3,
+          stagger: 0.1,
+        },
+        "-=0.4"
+      )
       .to(headingRef.current, {
         opacity: 1,
         y: 0,
@@ -151,7 +152,7 @@ export default function Home() {
   return (
     <>
       <Background>
-        <div className="flex flex-col relative w-full justify-center items-center left-0 right-0 top-0 bottom-0 m-auto  h-full  ">
+        <div className="flex flex-col relative w-full justify-center items-center left-0 right-0 top-0 bottom-0 m-auto  h-full  overflow-x-hidden scrollbar-hide ">
           <div className="flex relative flex-col w-full">
             <div
               ref={carouselRef}
@@ -159,7 +160,10 @@ export default function Home() {
             >
               <CarouselPlugin />
             </div>
-            <div ref={statsRefMobile} className="sections hidden md:flex justify-center  mt-2 mb-5">
+            <div
+              ref={statsRefMobile}
+              className="sections hidden md:flex justify-center  mt-2 mb-5"
+            >
               <section className="stats-section flex flex-wrap gap-6 md:gap-10 justify-center items-center px-4">
                 {stats.map((stat, index) => (
                   <div
@@ -185,10 +189,11 @@ export default function Home() {
                 ref={headingRef}
                 className="text-[5vh] md:text-[8vh] lg:text-[12vh] leading-[1.2] custom-text mb-10"
               >
-                <span className="text-[5vh] md:text-[10vh] lg:text-[15vh] text-transparent bg-clip-text bg-gradient-to-r from-[#56c5bc] via-[#14B8A6] to-[#0EA5E9] drop-shadow-[0_0_10px_rgba(14,181,233,0.7)] animate-pulse">
-                  Your League,
-                </span>
-
+                <Magnet padding={500} disabled={false} magnetStrength={50}>
+                  <span className="text-[5vh] md:text-[10vh] lg:text-[15vh] text-transparent bg-clip-text bg-gradient-to-r from-[#56c5bc] via-[#14B8A6] to-[#0EA5E9] drop-shadow-[0_0_10px_rgba(14,181,233,0.7)] animate-pulse">
+                    Your League,
+                  </span>
+                </Magnet>
                 <span className="text-glow">Your Legacy!</span>
               </h1>
               <p
@@ -203,26 +208,29 @@ export default function Home() {
                 ref={buttonsRef}
                 className="mt-6 md:mt-8 lg:mt-10  flex gap-3 flex-row justify-center items-center"
               >
-                <Link href={"/register"}>
-                  <Button
-                    className="bg-gradient-to-r from-cyan-400 to-cyan-600 text-white font-semibold text-sm md:text-base hover-scale shadow-lg hover:shadow-cyan-500/50 transition-all"
-                    variant="shadow"
-                    size="lg"
-                  >
-                    Register to play
-                  </Button>
-                </Link>
+                  <Link href={"/register"}>
+                    <Button
+                      className="bg-gradient-to-r from-cyan-400 to-cyan-600 text-white font-semibold text-sm md:text-base hover-scale shadow-lg hover:shadow-cyan-500/50 transition-all"
+                      variant="shadow"
+                      size="lg"
+                    >
+                      Register to play
+                    </Button>
+                  </Link>
                 <h1 className="text-[3vh] md:text-[3.5vh] lg:text-[4vh] font-mono text-gray-500">
                   |
                 </h1>
-                <Link href={"/season"}>
-                  <button className="bg-transparent text-[2vh] md:text-[2.5vh] lg:text-[3vh] text-teal-500  hover:text-teal-400 transition-all duration-300">
-                    Season
-                  </button>
-                </Link>
+                  <Link href={"/season"}>
+                    <button className="bg-transparent text-[2vh] md:text-[2.5vh] lg:text-[3vh] text-teal-500  hover:text-teal-400 transition-all duration-300">
+                      Season
+                    </button>
+                  </Link>
               </div>
             </div>
-            <div ref={statsRefDesktop} className="sections flex md:hidden mt-24 mb-5">
+            <div
+              ref={statsRefDesktop}
+              className="sections flex md:hidden mt-24 mb-5"
+            >
               <section className="stats-section flex flex-wrap gap-6 md:gap-10 justify-center items-center px-4">
                 {stats.map((stat, index) => (
                   <div

@@ -4,8 +4,8 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="flex justify-center items-center m-auto w-full h-screen overflow-hidden">
-      <div className="flex flex-col gap-10  mt-10">
+    <div className="flex justify-center items-center m-auto w-full h-screen overflow-auto scrollbar-hide">
+      <div className="flex my-52 mb-6 justify-center flex-col gap-10 md:mt-10">
         <Testimonials />
         <EmojiFeedback />
       </div>

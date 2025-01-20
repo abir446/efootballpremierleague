@@ -1,6 +1,7 @@
-'use strict';
+"use strict";
 import Link from "next/link";
 import "../styles/global.css";
+import Magnet from "./Magnet";
 export default function Footer() {
   return (
     <footer className="w-full bg-black/40 backdrop-blur-lg mt-5 md:mt-20 border-t border-gray-800">
@@ -10,8 +11,9 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-white mb-4">About League</h3>
             <p className="text-gray-400 text-sm">
-              Join the ultimate eFootball experience. Compete with the best, 
-              rise through the ranks, and become a legend in the digital football world.
+              Join the ultimate eFootball experience. Compete with the best,
+              rise through the ranks, and become a legend in the digital
+              football world.
             </p>
           </div>
 
@@ -19,7 +21,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold text-white mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {['Tournaments', 'Rankings', 'Rules', 'Support'].map((item) => (
+              {["Tournaments", "Rankings", "Rules", "Support"].map((item) => (
                 <li key={item}>
                   <Link href={`/${item.toLowerCase()}`}>
                     <span className="text-gray-400 hover:text-teal-400 transition-colors duration-300 text-sm">
@@ -36,10 +38,10 @@ export default function Footer() {
             <h3 className="text-xl font-bold text-white mb-4">Connect</h3>
             <ul className="space-y-2">
               {[
-                { name: 'Discord', icon: '🎮' },
-                { name: 'Twitter', icon: '🐦' },
-                { name: 'Instagram', icon: '📸' },
-                { name: 'YouTube', icon: '🎥' }
+                { name: "Discord", icon: "🎮" },
+                { name: "Twitter", icon: "🐦" },
+                { name: "Instagram", icon: "📸" },
+                { name: "YouTube", icon: "🎥" },
               ].map((social) => (
                 <li key={social.name}>
                   <Link href="#">
@@ -64,9 +66,11 @@ export default function Footer() {
                 placeholder="Enter your email"
                 className="bg-black/30 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400 text-sm"
               />
-              <button className="bg-gradient-to-r from-teal-400 to-emerald-500 text-black font-semibold px-4 py-2 rounded-lg hover:opacity-90 transition-opacity text-sm">
-                Subscribe
-              </button>
+              <Magnet padding={500} disabled={false} magnetStrength={50}>
+                <button className="bg-gradient-to-r w-full from-teal-400 to-emerald-500 text-black font-semibold px-4 py-2 rounded-lg hover:opacity-90 transition-opacity text-sm">
+                  Subscribe
+                </button>
+              </Magnet>
             </div>
           </div>
         </div>
