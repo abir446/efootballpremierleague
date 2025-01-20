@@ -42,7 +42,8 @@ export default function Home() {
   const textRef = useRef(null);
   const buttonsRef = useRef(null);
   const carouselRef = useRef(null);
-  const statsRef = useRef(null);
+  const statsRefMobile = useRef(null);
+  const statsRefDesktop = useRef(null);
   const [startCounting, setStartCounting] = useState(false);
 
   useEffect(() => {
@@ -52,7 +53,8 @@ export default function Home() {
         headingRef.current,
         textRef.current,
         buttonsRef.current,
-        statsRef.current,
+        statsRefMobile.current,
+        statsRefDesktop.current,
       ],
       {
         opacity: 0,
@@ -77,7 +79,7 @@ export default function Home() {
       duration: 1,
     })
     .to(
-      statsRef.current,
+      statsRefMobile.current,
       {
         opacity: 1,
         y: 0,
@@ -102,6 +104,15 @@ export default function Home() {
       )
       .to(
         buttonsRef.current,
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.3,
+        },
+        "-=0.4"
+      )
+      .to(
+        statsRefDesktop.current,
         {
           opacity: 1,
           y: 0,
@@ -148,7 +159,7 @@ export default function Home() {
             >
               <CarouselPlugin />
             </div>
-            <div ref={statsRef} className="sections hidden md:flex justify-center  mt-2 mb-5">
+            <div ref={statsRefMobile} className="sections hidden md:flex justify-center  mt-2 mb-5">
               <section className="stats-section flex flex-wrap gap-6 md:gap-10 justify-center items-center px-4">
                 {stats.map((stat, index) => (
                   <div
@@ -211,7 +222,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div ref={statsRef} className="sections flex md:hidden mt-24 mb-5">
+            <div ref={statsRefDesktop} className="sections flex md:hidden mt-24 mb-5">
               <section className="stats-section flex flex-wrap gap-6 md:gap-10 justify-center items-center px-4">
                 {stats.map((stat, index) => (
                   <div
