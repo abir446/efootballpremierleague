@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { Vortex } from "../components/ui/vortex";
+import "@/app/globals.css";
 
 interface Props {
   children: React.ReactNode;
@@ -8,9 +9,9 @@ interface Props {
 
 export default function Background({ children }: Props) {
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full h-screen scrollbar-hide">
       {/* Vortex background */}
-      <div className="fixed inset-0 z-0">
+      <div className="fixed inset-0 z-0 ">
         <Vortex
           backgroundColor="black"
           rangeY={200}
@@ -20,7 +21,7 @@ export default function Background({ children }: Props) {
         />
       </div>
       {/* Content */}
-      <div className="relative z-10 w-full h-full overflow-y-auto">
+      <div className="relative z-10 w-full scrollbar-hide overflow-y-auto">
         {children}
       </div>
     </div>

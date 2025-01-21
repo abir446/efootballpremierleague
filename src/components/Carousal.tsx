@@ -23,13 +23,13 @@ export function CarouselPlugin() {
     "/images/bn2.png",
     "/images/bn3.png",
     "/images/bn4.png",
-    "/images/bn5.png",
+    "/images/bn5.jpg",
   ];
 
   return (
     <Carousel
       plugins={[plugin.current]}
-      className="w-[48%] h-[60vh]"
+      className=" w-[100%] h-[40vh] md:h-[60vh]"
       onMouseEnter={plugin.current.stop}
       onMouseLeave={plugin.current.reset}
       opts={{
@@ -41,7 +41,7 @@ export function CarouselPlugin() {
         {images.map((imageSrc, index) => (
           <CarouselItem key={index}>
             <div className="p-1 relative rounded-[30px]">
-              <Card className="w-full bg-transparent  border-none h-[59vh]">
+              <Card className="w-full bg-transparent  border-none h-[40vh] md:h-[59vh]">
                 <CardContent className="flex items-center justify-center overflow-hidden ">
                   <Image
                     src={imageSrc}

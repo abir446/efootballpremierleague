@@ -1,9 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import 'locomotive-scroll/dist/locomotive-scroll.css';
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 @layer base {
@@ -80,3 +80,142 @@ body {
 .no-visible-scrollbar::-webkit-scrollbar {
   display: none;
 }
+.text-mesh {
+  background: radial-gradient(circle, #a3e635, #65a30d, #365314);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-glow {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.custom-text {
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.stats-section {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.stat-card {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@media (max-width: 768px) {
+  .stat-card {
+    padding: 1rem;
+  }
+  
+  .stats-section {
+    gap: 1rem;
+  }
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-glow {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.custom-text {
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.stats-section {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.stat-card {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@media (max-width: 768px) {
+  .stat-card {
+    padding: 1rem;
+  }
+  
+  .stats-section {
+    gap: 1rem;
+  }
+}
+
+/* Add this at the top of the file, after the imports */
+html, body {
+  -ms-overflow-style: none !important;  /* IE and Edge */
+  scrollbar-width: none !important;  /* Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+.locomotive-scroll-container::-webkit-scrollbar {
+  display: none !important;
+}
+
+[data-scroll-container] {
+  -ms-overflow-style: none !important;  /* IE and Edge */
+  scrollbar-width: none !important;  /* Firefox */
+}
+
+[data-scroll-container]::-webkit-scrollbar {
+  display: none !important;
+}
+
