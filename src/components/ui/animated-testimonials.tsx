@@ -45,7 +45,7 @@ export const AnimatedTestimonials = ({
     return Math.floor(Math.random() * 21) - 10;
   };
   return (
-    <div className="max-w-sm  md:max-w-[60vw]  mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 ">
+    <div className="max-w-xs  md:max-w-[60vw] flex justify-center items-center antialiased font-sans  ">
       <div className="relative grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-1">
         <div>
           <div className="relative h-80 w-80 md:h-[45vh] md:w-[20vw]">
@@ -128,7 +128,7 @@ export const AnimatedTestimonials = ({
               {testimonials[active].designation}
             </p>
             {testimonials[active].designation.includes("Developer") && (
-              <div className="mt-3 inline-block">
+              <div className="mt-1 inline-block">
                 {testimonials[active].name.includes("Souvik") ? (
                <div className="flex justify-center items-center gap-1">
                    <Link href="https://www.linkedin.com/in/souvik-rahut-3059a128a/">
@@ -176,7 +176,7 @@ export const AnimatedTestimonials = ({
                 )}
               </div>
             )}
-            <motion.p className="text-md text-gray-100 mt-4 font-semibold dark:text-neutral-300">
+            <motion.p className="text-md text-gray-100  font-semibold dark:text-neutral-300">
               {testimonials[active].quote.split(" ").map((word, index) => (
                 <motion.span
                   key={index}

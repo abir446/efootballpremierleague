@@ -1,10 +1,10 @@
-"use strict";
+"use client";
 import Link from "next/link";
 import "../styles/global.css";
 import Magnet from "./Magnet";
 export default function Footer() {
   return (
-    <footer className="w-full bg-black/40 backdrop-blur-lg mt-5 md:mt-20 border-t border-gray-800">
+    <footer className="w-full  bg-black/40 backdrop-blur-lg  md:mt-20 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About Section */}
@@ -21,7 +21,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold text-white mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {["Tournaments", "Rankings", "Rules", "Support"].map((item) => (
+              {["Tournaments", "Rankings", "Rules", "Contact"].map((item) => (
                 <li key={item}>
                   <Link href={`/${item.toLowerCase()}`}>
                     <span className="text-gray-400 hover:text-teal-400 transition-colors duration-300 text-sm">
@@ -58,18 +58,16 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold text-white mb-4">Stay Updated</h3>
             <p className="text-gray-400 text-sm mb-4">
-              Subscribe to get the latest updates and news.
+              Follow to get the latest updates and news.
             </p>
             <div className="flex flex-col space-y-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="bg-black/30 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400 text-sm"
-              />
+              
               <Magnet padding={500} disabled={false} magnetStrength={50}>
+                <Link href="https://www.instagram.com/efootballpremierleague">
                 <button className="bg-gradient-to-r w-full from-teal-400 to-emerald-500 text-black font-semibold px-4 py-2 rounded-lg hover:opacity-90 transition-opacity text-sm">
-                  Subscribe
+                  Follow Us
                 </button>
+                </Link>
               </Magnet>
             </div>
           </div>
@@ -79,7 +77,7 @@ export default function Footer() {
         <div className="mt-10 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm">
-              © 2024 eFootball Premier League. All rights reserved.
+              © eFootball Premier League. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <Link href="/privacy">
