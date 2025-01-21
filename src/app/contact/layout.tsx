@@ -1,11 +1,13 @@
+
 import Background from "@/components/Background";
-import { WavyBackground } from "@/components/ui/wavy-background";
 import React from "react";
 interface Props {
   children: React.ReactNode;
 }
 const layout = ({ children }: Props) => {
-  return <WavyBackground className="w-full mx-auto overflow-hidden">{children}</WavyBackground>;
+  return (
+  <Background>{children}</Background>
+  )
 };
 
 export default layout;
