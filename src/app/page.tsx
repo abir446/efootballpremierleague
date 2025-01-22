@@ -7,6 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Footer from "@/components/Footer";
 import Magnet from "@/components/Magnet";
+import { InteractiveHoverButton } from "@/components/Hoverbutton";
 
 interface AnimatedCounterProps {
   end: string | number;
@@ -206,25 +207,26 @@ export default function Home() {
               </p>
               <div
                 ref={buttonsRef}
-                className="mt-6 md:mt-8 lg:mt-10  flex gap-3 flex-row justify-center items-center"
+                className="mt-6 md:mt-8 lg:mt-10 flex gap-3 flex-row justify-center items-center z-10"
               >
-                  <Link href={"/register"}>
-                    <Button
-                      className="bg-gradient-to-r from-cyan-400 to-cyan-600 text-white font-semibold text-sm md:text-base hover-scale shadow-lg hover:shadow-cyan-500/50 transition-all"
-                      variant="shadow"
-                      size="lg"
-                    >
-                      Register to play
-                    </Button>
-                  </Link>
+                <Link href={"/register"}>
+                  {/* <Button
+                    className="bg-gradient-to-r from-cyan-400 to-cyan-600 text-white font-semibold text-sm md:text-base hover-scale shadow-lg hover:shadow-cyan-500/50 transition-all"
+                    variant="shadow"
+                    size="lg"
+                  >
+                    Register to play
+                  </Button> */}
+                  <InteractiveHoverButton>Ja Bhai Tu Khel</InteractiveHoverButton>
+                </Link>
                 <h1 className="text-[3vh] md:text-[3.5vh] lg:text-[4vh] font-mono text-gray-500">
                   |
                 </h1>
-                  <Link href={"/season"}>
-                    <button className="bg-transparent text-[2vh] md:text-[2.5vh] lg:text-[3vh] text-teal-500  hover:text-teal-400 transition-all duration-300">
-                      Season
-                    </button>
-                  </Link>
+                <Link href={"/season"}>
+                  <button className="bg-transparent text-[2vh] md:text-[2.5vh] lg:text-[3vh] text-teal-500 hover:text-teal-400 transition-all duration-300">
+                    Season
+                  </button>
+                </Link>
               </div>
             </div>
             <div

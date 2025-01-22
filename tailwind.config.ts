@@ -10,6 +10,9 @@ export default {
   ],
   theme: {
     extend: {
+      animation: {
+        rippling: "rippling var(--duration) ease-out",
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -64,6 +67,15 @@ export default {
           },
           to: {
             backgroundPosition: "-200% 0",
+          },
+        },
+        rippling: {
+          "0%": {
+            opacity: "1",
+          },
+          "100%": {
+            transform: "scale(2)",
+            opacity: "0",
           },
         },
       },
