@@ -38,13 +38,13 @@ export default function Footer() {
             <h3 className="text-xl font-bold text-white mb-4">Connect</h3>
             <ul className="space-y-2">
               {[
-                { name: "Discord", icon: "🎮" },
-                { name: "Twitter", icon: "🐦" },
-                { name: "Instagram", icon: "📸" },
-                { name: "YouTube", icon: "🎥" },
+                
+                { name: "Instagram", icon: "🐺" , link:"https://www.instagram.com/efootballpremierleague"},
+                { name: "Twitter", icon: "🐦" , link:"/twitter"},
+                { name: "Whatsapp", icon: "👀", link:"https://chat.whatsapp.com/Ep8tPP3Ys6NL8bLjIp3ZGk" },
               ].map((social) => (
                 <li key={social.name}>
-                  <Link href="#">
+                  <Link href={social.link}>
                     <span className="text-gray-400 hover:text-teal-400 transition-colors duration-300 text-sm">
                       {social.icon} {social.name}
                     </span>
