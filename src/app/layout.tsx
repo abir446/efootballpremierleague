@@ -6,7 +6,7 @@ import { NextUIProvider } from "@nextui-org/react";
 import Navbar from "../components/Navbar";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import {ReactLenis} from "@/lib/lenis";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -22,11 +22,15 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body className={`${inter.className} antialiased relative overflow-x-hidden`}>
+        <ReactLenis root>
+
         <NextUIProvider>
           <Navbar />
           {children}
           <ToastContainer />
         </NextUIProvider>
+        </ReactLenis>
+
       </body>
     </html>
   );
