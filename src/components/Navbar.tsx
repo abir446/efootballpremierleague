@@ -76,12 +76,11 @@ export default function Navbar() {
                 "https://www.instagram.com/efootballpremierleague/profilecard/"
               }
             >
-              <Button
-                className="cursor-pointer bg-cyan-400 text-white font-semibold"
-                variant="shadow"
+              <button
+                className="cursor-pointer bg-cyan-400 py-2 px-4 rounded-xl text-white font-semibold hover:bg-cyan-500 transition-all duration-300"
               >
                 Join Us
-              </Button>
+              </button>
             </Link>
           </div>
         </div>

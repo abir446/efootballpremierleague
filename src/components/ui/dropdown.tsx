@@ -15,7 +15,7 @@ export default function Menu() {
   return (
     <Dropdown>
       <DropdownTrigger>
-        <Button variant="shadow" className="cursor-pointer font-semibold">
+        <Button variant="solid" className="cursor-pointer font-semibold">
           Open Menu
         </Button>
       </DropdownTrigger>

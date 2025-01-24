@@ -4,6 +4,8 @@ import "./globals.css";
 import "../styles/global.css";
 import { NextUIProvider } from "@nextui-org/react";
 import Navbar from "../components/Navbar";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +25,7 @@ export default function RootLayout({
         <NextUIProvider>
           <Navbar />
           {children}
+          <ToastContainer />
         </NextUIProvider>
       </body>
     </html>
