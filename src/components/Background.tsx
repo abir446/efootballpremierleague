@@ -13,11 +13,10 @@ export default function Background({ children }: Props) {
       {/* Vortex background */}
       <div className="fixed inset-0 z-0 ">
         <Vortex
-          backgroundColor="black"
-          rangeY={200}
-          particleCount={300}
+          particleCount={200}
           baseHue={120}
-          className="w-full h-full"
+          backgroundColor="#000000"
+          containerClassName="w-full h-full fixed inset-0"
         />
       </div>
       {/* Content */}
