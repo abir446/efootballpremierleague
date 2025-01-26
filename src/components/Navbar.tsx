@@ -63,8 +63,6 @@ export default function Navbar() {
         </div>
         <div ref={linksRef} className="flex justify-center items-center gap-3 md:gap-5 lg:gap-10 text-gray-50 ">
           <div className="hidden md:flex justify-center items-center gap-2  lg:gap-10">
-            <Link className="hover:text-teal-400 duration-300" href={"/tournaments"}>Tournament</Link>
-            <Link className="hover:text-teal-400 duration-300" href={"/rankings"}>Rankings</Link>
             <Link className="hover:text-teal-400 duration-300" href={"/season"}>Season</Link>
             <Link className="hover:text-teal-400 duration-300" href={"/about"}>About Us</Link>
             <Link className="hover:text-teal-400 duration-300" href={"/contact"}>Contact Us</Link>
